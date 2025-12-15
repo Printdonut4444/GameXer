@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url("../media/cyberpunk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #e7e7e7;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.image-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.layer-blur {
+  height: 0;
+  width: 30rem;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  box-shadow: 0 0 700px 15px white;
+  rotate: -30deg;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-left: -5%;
+  z-index: 999;
+}
+
+nav a {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  color: #a7a7a7;
+}
+
+.btn-signing {
+  background-color: #a7a7a7;
+  color: black;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.btn-signing:hover {
+  background-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 6rem);
+}
+
+.content {
+  max-width: 40rem;
+  margin-left: 10%;
+  z-index: 999;
+}
+
+.tag-box {
+  position: relative;
+  width: 18rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+  background-size: 200%;
+  animation: animationGradient 2.5s linear infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animationGradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.tag-box .tag {
+  inset: 3px 3px 3px 3px;
+  width: 98%;
+  height: 90%;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.tag-box .tag:hover {
+  color: #5300a0;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+
+.name-gradient {
+  background: linear-gradient(to right, #e100ff, #9600c8 60%, #a728f7 100%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox */
+  color: transparent;
+  animation: animationGradient 2.5s linear infinite;
+}
+
+.description {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  max-width: 35rem;
+  color: gray;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.btn-get-started {
+  text-decoration: none;
+  border: 1px solid #2a2a2a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: background-color 0.2s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #1a1a1a;
+}
+
+.btn-signing-main {
+  text-decoration: none;
+  background-color: lightgray;
+  color: black;
+  padding: 0.6rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: background-color 0.2s ease;
+}
+
+.btn-signing-main:hover {
+  background-color: gray;
+}
+
+.robot-3d {
+  position: absolute;
+  top: 0;
+  right: -22%;
+  height: 100vh;
+}
+
+#features {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.feature {
+  margin: 60px 0 30px 0;
+  text-align: center;
+}
+.feature h1 {
+  font-size: 2.2em;
+  color: white;
+  margin-bottom: 34px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.feature-box {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  height: 50vh;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background: black;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px #18284817;
+  padding: 36px 22px 28px 22px;
+  width: 290px;
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+@media (max-width: 769px) {
+  .feature-box {
+    display: block;
+  }
+
+  .feature-item {
+    margin-bottom: 20px;
+  }
+}
+
+.feature-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 32px #ff670026;
+}
+
+.feature-item h3,
+p {
+  color: white;
+}
+
+.feature-icon {
+  font-size: 2.7em;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .feature-box {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+#download,
+#contact {
+  background-color: #000;
+  padding: 50px 0 50px 0;
+}
+
+.download-section,
+.contact-section {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  background-color: black;
+  box-shadow: 0 2px 18px #18284818;
+  padding: 36px 20px 32px 20px;
+}
+.download-section h1,
+.contact-section h1 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.download-section h1 span {
+  background: linear-gradient(to right, #e100ff, #9600c8 60%, #a728f7 100%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox */
+  color: transparent;
+  animation: animationGradient 2.5s linear infinite;
+}
+
+.download-description {
+  font-size: 1.12em;
+  color: white;
+  margin-bottom: 26px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.download-btn {
+  background-color: #182848;
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 28px;
+  font-size: 1.07em;
+  font-weight: 600;
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 8px #9600c82a;
+}
+
+.download-btn svg {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.download-btn img {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.download-btn.win {
+  background-color: #1857a4;
+}
+.download-btn.mac {
+  background-color: #6e47d2;
+}
+.download-btn.android {
+  background-color: #3ddc84;
+}
+.download-btn.ios {
+  background-color: white;
+  color: black;
+}
+.download-btn:hover {
+  background-color: #ff6700;
+  color: #fff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0 auto 16px auto;
+  max-width: 320px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 9px 14px;
+  border: 1.5px solid #b0c6e7;
+  border-radius: 7px;
+  font-size: 1em;
+  outline: none;
+  font-family: inherit;
+}
+.contact-form button {
+  background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+  background-size: 200%;
+  animation: animationGradient 2.5s linear infinite;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 22px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.contact-form button:hover {
+  background-color: #182848;
+}
+.social-icons {
+  margin: 14px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icons a svg {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  transition: transform 0.18s;
+}
+
+.social-icons a svg:hover {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+.social-icons a[title="Twitter"] svg {
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1300px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  .content {
+    margin-top: 85%;
+  }
+
+  .robot-3d {
+    scale: 0.8;
+    top: -20%;
+    right: 2%;
+  }
+}
+
+@media (max-width: 769px) {
+  header {
+    padding: 1rem 0.1rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .btn-signing {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .content {
+    margin-top: 25rem;
+  }
+
+  .robot-3d {
+    scale: 0.5;
+    top: -25%;
+    right: 0;
+  }
+
+  .content {
+    max-width: 30rem;
+    margin-left: 10%;
+  }
+
+  .tag-box {
+    width: 12rem;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .btn-get-started {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .btn-signing-main {
+    font-size: 0.8rem;
+    padding: 0.8rem 2rem;
+  }
+}
